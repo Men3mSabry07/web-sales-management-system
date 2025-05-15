@@ -13,6 +13,7 @@ body {
 }
 
 
+
 .app-container {
   width: 85%;
   max-width: 1200px;
@@ -23,13 +24,10 @@ body {
   overflow: hidden;
 }
 
-.top-bar {
-    position: relative;
-}
+
 
 .page-title h1 {
     font-size: 24px;
-    font-weight: 600;
     color: #2c3e50;
     margin-bottom: 5px;
 }
@@ -182,9 +180,7 @@ body {
   margin-bottom: 20px;
 }
 
-.col_div {
-  flex: 1;
-}
+
 
 .input_div {
   margin-bottom: 15px;
@@ -218,6 +214,7 @@ body {
   border: 1px solid #e1e5eb;
   border-radius: 6px;
   font-size: 14px;
+  transition: all 0.2s;
   background-color: #fafafa;
 }
 
@@ -240,12 +237,14 @@ body {
 }
 
 .price_label {
+  font-weight: 600;
   color: #2c3e50;
   margin-right: 10px;
 }
 
 .price_value {
   font-size: 18px;
+  font-weight: 700;
   color: #e74c3c;
 }
 
@@ -308,9 +307,7 @@ body {
   justify-content: center;
   flex: 2;
 }
-.spacer, .delete_all {
-  flex: 1;
-}
+
 
 .table_header h2 {
   font-size: 20px;
@@ -392,6 +389,7 @@ body {
   font-size: 13px;
 }
 
+
 .action-btn:hover {
   background-color: rgba(0, 0, 0, 0.05);
   transform: translateY(-1px);
@@ -442,14 +440,14 @@ body {
 .btnSearch {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 16px;
     justify-content: center;
     padding: 0 10px 10px;
 }
 
 .btnSearch button {
     flex: 1;
-    padding: 0.75rem 1rem;
+    padding: 12px 16;
     background-color: #2c2c3e; 
     color: #e0e0e0;
     border: 1px solid #444; 
@@ -512,6 +510,7 @@ body {
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -556,7 +555,7 @@ body {
 
 .table-container {
     overflow-x: auto;
-    margin-top: 1rem;
+    margin-top: 16px;
     padding: 0 10px 10px 10px;
 }
 
@@ -568,7 +567,7 @@ table {
 }
 
 th, td {
-    padding: 1rem;
+    padding: 16rpx;
     border-bottom: 1px solid #333;
 }
 
@@ -577,13 +576,13 @@ th {
     font-weight: 500;
     color: #e0e0e0;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 14rpx;
     letter-spacing: 0.5px;
 }
 
 .actions {
     display: flex;
-    gap: 0.5rem;
+    gap: 8px;
     justify-content: center;
 }
 
