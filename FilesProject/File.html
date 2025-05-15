@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Inventory System</title>
+  <link rel="stylesheet" href="./FileStyle.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <div class="main_content">
+            <div class="top_bar">
+                <div class="page_title">
+                    <h1 id="head">My Inventory System</h1>
+                    <p>By Men3m Sabry</p>
+                </div>
+            </div>
+        
+            <!-- form for adding products -->
+            <div id="form_div" class="form_panel">
+                <div class="form_title">
+                    <h2>New Product</h2>
+                </div>
+                <form id="myForm" class="add_form">
+                    <div class="form_cols">
+                        <div class="col_div">
+                            <div class="input_div">
+                                <label for="title">Product Name</label>
+                                <div class="input_box">
+                                    <input id="title" type="text" name="title" placeholder="Enter product name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="input_div">
+                                <label for="category">Category</label>
+                                <div class="input_box">
+                                    <input id="category" type="text" name="category" placeholder="Enter category" required>
+                                </div>
+                            </div>
+                            
+                            <div class="input_div">
+                                <label for="quantity">Quantity</label>
+                                <div class="input_box">
+                                    <input  id="quantity" type="number" name="quantity" placeholder="Enter quantity"  required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col_div">
+                            <div class="input_div">
+                                <label for="price">Price ($)</label>
+                                <div class="input_box">
+                                    <input onkeyup="getTotal()" id="price" type="number" name="price" placeholder="Enter price" required>
+                                </div>
+                            </div>
+                            
+                            <div class="input_div">
+                                <label for="taxes">Taxes ($)</label>
+                                <div class="input_box">
+                                    <input onkeyup="getTotal()" id="taxes" type="number" name="taxes" placeholder="Enter taxes"  required>
+                                </div>
+                            </div>
+                            
+                            <div class="row_div">
+                                <div class="half_div">
+                                    <label for="ads">Ads ($)</label>
+                                    <div class="input_box">
+                                        <input onkeyup="getTotal()" id="ads" type="number" name="ads" placeholder="Ads cost"  required>
+                                    </div>
+                                </div>
+                                
+                                <div class="half_div">
+                                    <label for="discount">Discount (%)</label>
+                                    <div class="input_box">
+                                        <input onkeyup="getTotal()" id="discount" type="number" name="discount" placeholder="Discount"  required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="total_box">
+                        <div class="price_label">Total Price:</div>
+                        <div id="total" class="price_value"></div>
+                    </div>
+                
+                    <div class="buttons_div">
+                        <button id="btnCreate" type="submit" class="btn_primary">Create Product</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- products table -->
+            <div class="products_table">
+        
+                <div class="table_header">
+                    <div id="DeleteAll" class="delete_all"></div>
+                        <!-- search box -->
+                        <div class="search_box">
+                            <label for="search">Search: </label>
+                            <input type="text" id="search" placeholder="Enter product name" onkeyup="searchProducts()">
+                        </div>
+                    
+                  
+                </div>
+                
+                <div class="data_grid">
+                    <div class="table_header_row">
+                        <div class="table_cell">ID</div>
+                        <div class="table_cell">Product</div>
+                        <div class="table_cell">Category</div>
+                        <div class="table_cell">Price</div>
+                        <div class="table_cell">Taxes</div>
+                        <div class="table_cell">Ads</div>
+                        <div class="table_cell">Discount</div>
+                        <div class="table_cell">Total</div>
+                        <div class="table_cell">Actions</div>
+                    </div>
+                    <div id="table_data" class="table_body">
+                       
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+ 
+    <script src="./Script_new.js"></script>
+</body>
+</html>
